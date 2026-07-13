@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
               onClick={() => setModalOpen(true)}
               className="w-full md:w-auto px-8 py-4 bg-white hover:bg-blue-50 text-[#222831] font-semibold rounded-xl text-center shadow-md transition-all duration-200 cursor-pointer"
             >
-              Email Me
+              Email 
             </button>
           </div>
         </div>

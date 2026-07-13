@@ -42,7 +42,10 @@ const AboutProfile: React.FC<AboutProfileProps> = ({ onEmailClick }) => {
 
         {/* Bio Paragraph (Flows below the image/title row) */}
         <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-md pt-2">
-          I build robust, high-performance web applications with a focus on custom integrations, automated email systems, and clean interfaces. Driven by efficiency and clean code.
+            Hello, I’m Argie — a fresh graduate with a Bachelor’s in Information Systems and Technology.  
+            I specialize in building robust, high‑performance web applications with a focus on custom integrations, automated email systems, and clean, user‑friendly interfaces.  
+            I’m driven by efficiency, clean code, and practical solutions. My experience includes working with PHP, SQL, Bootstrap, and modern frontend frameworks like React and Tailwind. I enjoy optimizing workflows, handling edge cases, and designing interfaces that feel intuitive.  
+            As a newcomer to the industry, I bring fresh energy, adaptability, and a strong eagerness to learn. I’m excited to contribute to teams where I can grow while delivering real impact through technology.
         </p>
       </div>
 

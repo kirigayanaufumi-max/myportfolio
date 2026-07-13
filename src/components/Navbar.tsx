@@ -11,8 +11,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, visible = true }) => {
 
   const navItems = [
     { id: "profile", label: "Profile", mobileOnly: true },
-    { id: "hero", label: "About" },
     { id: "portfolio", label: "Projects" },
+    { id: "skills", label: "Skills" },
     { id: "contact", label: "Contact" },
   ];
 

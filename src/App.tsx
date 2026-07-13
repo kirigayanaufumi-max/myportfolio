@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import AboutProfile from "./components/AboutProfile";
-import Hero from "./components/Hero";
+import Skills from "./components/Skills";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 
 const App: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
-  const [activeSection, setActiveSection] = useState("hero");
+  const [activeSection, setActiveSection] = useState("portfolio");
   const [collapsed, setCollapsed] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
   const [emailModalOpen, setEmailModalOpen] = useState(false);
@@ -48,10 +48,10 @@ const App: React.FC = () => {
 
       // Scrollspy logic
       const sections = isDesktop
-        ? ["hero", "portfolio", "contact"]
-        : ["profile", "hero", "portfolio", "contact"];
+        ? ["portfolio", "skills", "contact"]
+        : ["profile", "portfolio", "skills", "contact"];
       
-      let currentActive = "hero";
+      let currentActive = "portfolio";
       const threshold = window.innerHeight / 2; // Midpoint of viewport
 
       for (const id of sections) {
@@ -198,8 +198,8 @@ const App: React.FC = () => {
           }`}
         >
           <div className="w-full space-y-12 pb-12">
-            <Hero />
             <Portfolio />
+            <Skills />
             <Contact />
           </div>
           {/* Footer spans the full width at the bottom of the right column */}
