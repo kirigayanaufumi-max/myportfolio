@@ -9,7 +9,7 @@ const AboutProfile: React.FC = () => {
     <div className="flex flex-col items-start text-left space-y-6 h-full justify-between text-gray-200 w-full">
       <div className="space-y-6 w-full">
         {/* Header Block: Image and Name/Title Side-by-Side */}
-        <div className="flex flex-row items-center gap-4 sm:gap-6 w-full">
+        <div className="flex flex-row items-center gap-6 sm:gap-8 w-full">
           {/* Profile Image & Status Badge (swaps to profile.png on hover) */}
           <div
             className="relative inline-block flex-shrink-0 cursor-pointer"
@@ -19,7 +19,7 @@ const AboutProfile: React.FC = () => {
             <img
               src={isHovered ? profilePng : profileImg}
               alt="Argie Calicaran Profile"
-              className={`w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl object-cover shadow-lg ring-4 ring-[#00ADB5]/10 transition-all duration-300 hover:scale-105 ${
+              className={`w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl object-cover shadow-lg ring-4 ring-[#00ADB5]/10 transition-all duration-300 hover:scale-105 ${
                 isHovered ? "grayscale" : ""
               }`}
             />
