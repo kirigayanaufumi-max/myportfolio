@@ -21,63 +21,34 @@ const App: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["hero", "portfolio", "contact"];
-      const scrollContainer = mainRef.current;
-      
-      const isDesktop = window.innerWidth >= 768; // md breakpoint
-
-      // Check if scroll is at the very bottom
-      let isBottom = false;
-      if (isDesktop && scrollContainer) {
-        isBottom = Math.abs(scrollContainer.scrollHeight - scrollContainer.clientHeight - scrollContainer.scrollTop) < 20;
-      } else {
-        isBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 20;
-      }
-
-      if (isBottom) {
-        setActiveSection("contact");
-        return;
-      }
-
-      // Find the active section based on scroll position relative to threshold
       let currentActive = "hero";
-      let minDistance = Infinity;
-      const targetY = 150; // Threshold from viewport top
+      const threshold = window.innerHeight / 2; // Midpoint of viewport
 
-      sections.forEach((id) => {
+      for (const id of sections) {
         const el = document.getElementById(id);
         if (el) {
           const rect = el.getBoundingClientRect();
-          const distance = Math.abs(rect.top - targetY);
-
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            if (distance < minDistance) {
-              minDistance = distance;
-              currentActive = id;
-            }
+          // If the top of the section has crossed the middle of the viewport, make it active
+          if (rect.top <= threshold) {
+            currentActive = id;
           }
         }
-      });
+      }
 
       setActiveSection(currentActive);
     };
 
-    const scrollContainer = mainRef.current;
-    if (scrollContainer) {
-      scrollContainer.addEventListener("scroll", handleScroll);
-    }
-    window.addEventListener("scroll", handleScroll);
-
+    // Use capture phase (true) so the window catches scroll events bubbling up from scrollable child elements (like <main> on desktop)
+    window.addEventListener("scroll", handleScroll, { capture: true });
+    
     // Initial check
     handleScroll();
 
-    // Re-check on resize in case layout changes
+    // Re-check on resize
     window.addEventListener("resize", handleScroll);
 
     return () => {
-      if (scrollContainer) {
-        scrollContainer.removeEventListener("scroll", handleScroll);
-      }
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll, { capture: true });
       window.removeEventListener("resize", handleScroll);
     };
   }, []);
@@ -165,7 +136,7 @@ const App: React.FC = () => {
           {/* Toggle Sidebar Button: absolute inside column when expanded, fixed top-left when collapsed */}
           <button
             onClick={() => setCollapsed(!collapsed)}
-            className={`z-50 flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest uppercase text-gray-400 hover:text-[#00ADB5] transition-all duration-300 hover:scale-105 cursor-pointer outline-none select-none ${
+            className={`z-50 flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest uppercase text-gray-200 hover:text-[#00ADB5] transition-all duration-300 hover:scale-105 cursor-pointer outline-none select-none ${
               collapsed
                 ? "fixed top-6 left-6"
                 : "absolute top-6 left-6 md:left-auto md:right-4"
