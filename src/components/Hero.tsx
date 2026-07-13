@@ -18,20 +18,6 @@ const Hero: React.FC = () => {
         <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
           I'm a backend-focused developer who loves building performant API integrations, automated systems, and clean interfaces that users love. Check out some of my work below.
         </p>
-        <div className="flex flex-wrap gap-4 pt-4">
-          <a
-            href="#portfolio"
-            className="px-6 py-3.5 bg-[#00ADB5] hover:bg-[#00979e] text-[#222831] font-bold rounded-xl shadow-md shadow-[#00ADB5]/10 hover:shadow-lg hover:shadow-[#00ADB5]/20 transition-all duration-200"
-          >
-            Explore Projects
-          </a>
-          <a
-            href="#contact"
-            className="px-6 py-3.5 bg-[#393E46] hover:bg-[#00ADB5]/20 text-gray-200 hover:text-white font-medium rounded-xl transition-all duration-200"
-          >
-            Get in Touch
-          </a>
-        </div>
       </div>
     </section>
   );

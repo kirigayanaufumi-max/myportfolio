@@ -28,20 +28,12 @@ const Contact: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+          <div className="w-full md:w-auto flex-shrink-0">
             <a
-              href="mailto:argie@example.com"
-              className="px-6 py-3.5 bg-white hover:bg-blue-50 text-[#222831] font-semibold rounded-xl text-center shadow-md transition-all duration-200"
+              href="mailto:argiecalicaran.678@gmail.com"
+              className="inline-block w-full md:w-auto px-8 py-4 bg-white hover:bg-blue-50 text-[#222831] font-semibold rounded-xl text-center shadow-md transition-all duration-200"
             >
               Email Me
-            </a>
-            <a
-              href="https://linkedin.com/in/argie"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl text-center transition-all duration-200"
-            >
-              LinkedIn Profile
             </a>
           </div>
         </div>
