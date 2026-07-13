@@ -47,8 +47,8 @@ const ParticleBackground: React.FC = () => {
 
     const initParticles = () => {
       particles = [];
-      const particleCount = Math.floor((canvas.width * canvas.height) / 25000); // density-based
-      const limit = Math.min(Math.max(particleCount, 25), 90); // clamp between 25 and 90
+      const particleCount = Math.floor((canvas.width * canvas.height) / 8000); // density-based
+      const limit = Math.min(Math.max(particleCount, 80), 220); // clamp between 80 and 220
       
       const colors = [
         "rgba(0, 173, 181, 0.35)",  // Teal
