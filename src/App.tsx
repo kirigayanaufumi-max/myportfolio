@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 const App: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
   const [activeSection, setActiveSection] = useState("hero");
+  const [collapsed, setCollapsed] = useState(false);
 
   const handleAsideWheel = (e: React.WheelEvent) => {
     if (mainRef.current) {
@@ -89,15 +90,52 @@ const App: React.FC = () => {
       {/* Dynamic Background Particles */}
       <ParticleBackground />
 
-      {/* Main Column Layout Container (Capped at max-w-[1440px], outer margins adjusted to 32px (md:pl-8/md:pr-8) to free up horizontal space) */}
-      <div className="flex-grow flex flex-col md:flex-row overflow-x-hidden md:overflow-hidden w-full bg-transparent md:h-screen relative z-10 gap-8 md:gap-36 portfolio-container">
-        {/* Left Column: Fixed width (w-1/3, minimum 420px on desktop) and full height (h-screen) on desktop */}
-        <aside
-          className="w-full md:w-1/3 md:min-w-[420px] bg-transparent flex-shrink-0 md:h-screen md:overflow-y-auto px-6 sm:px-10 md:pl-8 md:pr-0 pt-12 md:pt-28 pb-10 md:pb-20"
-          onWheel={handleAsideWheel}
-        >
-          <AboutProfile />
-        </aside>
+      {/* Main Column Layout Container */}
+      <div className={`flex-grow flex flex-col md:flex-row overflow-x-hidden md:overflow-hidden w-full bg-transparent md:h-screen relative z-10 transition-all duration-300 ${
+        collapsed ? "gap-0" : "gap-8 md:gap-36"
+      } portfolio-container`}>
+        
+        {/* Left Column Wrapper: controls collapse layout width */}
+        <div className={`relative flex-shrink-0 transition-all duration-300 ${
+          collapsed
+            ? "w-0 h-0 md:w-0 md:min-w-0 p-0"
+            : "w-full md:w-1/3 md:min-w-[420px]"
+        }`}>
+          <aside
+            className={`w-full h-full md:h-screen md:overflow-y-auto pt-12 md:pt-28 pb-10 md:pb-20 px-6 sm:px-10 md:pl-8 md:pr-0 transition-all duration-300 ${
+              collapsed
+                ? "w-0 h-0 overflow-hidden opacity-0 pointer-events-none"
+                : "opacity-100"
+            }`}
+            onWheel={handleAsideWheel}
+          >
+            <AboutProfile />
+          </aside>
+
+          {/* Toggle Sidebar Button: absolute inside column when expanded, fixed top-left when collapsed */}
+          <button
+            onClick={() => setCollapsed(!collapsed)}
+            className={`z-50 flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest uppercase text-gray-400 hover:text-[#00ADB5] transition-all duration-300 hover:scale-105 cursor-pointer outline-none select-none ${
+              collapsed
+                ? "fixed top-6 left-6"
+                : "absolute top-6 left-6 md:left-auto md:right-4"
+            }`}
+            title={collapsed ? "Expand Profile" : "Collapse Profile"}
+          >
+            <svg
+              className={`w-4 h-4 transition-transform duration-300 ${
+                collapsed ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            <span>Profile</span>
+          </button>
+        </div>
 
         {/* Right Column: Flexible width (flex-1) and scrollable (overflow-y-scroll) on desktop */}
         <main
