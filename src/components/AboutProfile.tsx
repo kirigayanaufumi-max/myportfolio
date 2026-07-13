@@ -31,8 +31,7 @@ const AboutProfile: React.FC = () => {
               Argie Calicaran
             </h1>
             <p className="text-sm sm:text-base font-semibold text-gray-400 tracking-wide uppercase leading-tight pt-1">
-              PHP Developer <br />
-              & UI/UX Designer
+              Web Developer
             </p>
           </div>
         </div>
@@ -47,7 +46,7 @@ const AboutProfile: React.FC = () => {
       <div className="w-full space-y-6 pt-4">
         <div className="flex justify-start gap-4">
           <a
-            href="https://github.com/argie"
+            href="https://github.com/kirigayanaufumi-max"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2.5 bg-[#393E46] hover:bg-[#00ADB5]/20 text-gray-300 hover:text-[#00ADB5] rounded-xl transition duration-200"
@@ -58,7 +57,7 @@ const AboutProfile: React.FC = () => {
             </svg>
           </a>
           <a
-            href="https://linkedin.com/in/argie"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2.5 bg-[#393E46] hover:bg-[#00ADB5]/20 text-gray-300 hover:text-[#00ADB5] rounded-xl transition duration-200"
@@ -69,7 +68,7 @@ const AboutProfile: React.FC = () => {
             </svg>
           </a>
           <a
-            href="mailto:argie@example.com"
+            href="mailto:argiecalicaran.678@gmail.com"
             className="p-2.5 bg-[#393E46] hover:bg-[#00ADB5]/20 text-gray-300 hover:text-[#00ADB5] rounded-xl transition duration-200"
             title="Email Me"
           >
