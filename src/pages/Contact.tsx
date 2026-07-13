@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-12">
+    <section id="contact" className="py-12 scroll-mt-24">
       <div className="space-y-2 mb-10">
         <span className="text-xs font-semibold tracking-widest text-[#00ADB5] uppercase">
           Connect

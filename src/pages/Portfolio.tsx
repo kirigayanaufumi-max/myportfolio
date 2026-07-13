@@ -4,7 +4,7 @@ import projects from "../data/projects";
 
 const Portfolio: React.FC = () => {
   return (
-    <section id="portfolio" className="py-6">
+    <section id="portfolio" className="py-6 scroll-mt-24">
       <div className="space-y-2 mb-8">
         <span className="text-xs font-semibold tracking-widest text-[#00ADB5] uppercase">
           My Work
