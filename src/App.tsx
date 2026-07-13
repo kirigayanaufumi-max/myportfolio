@@ -11,6 +11,7 @@ const App: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
   const [activeSection, setActiveSection] = useState("hero");
   const [collapsed, setCollapsed] = useState(false);
+  const [navVisible, setNavVisible] = useState(true);
 
   const handleAsideWheel = (e: React.WheelEvent) => {
     if (mainRef.current) {
@@ -19,8 +20,29 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
+    let lastScroll = 0;
+
     const handleScroll = () => {
-      const sections = ["hero", "portfolio", "contact"];
+      const isDesktop = window.innerWidth >= 768; // md breakpoint
+      const currentScroll = isDesktop ? 0 : window.scrollY;
+
+      // Header show/hide on scroll for mobile
+      if (!isDesktop) {
+        if (currentScroll > lastScroll && currentScroll > 80) {
+          setNavVisible(false);
+        } else if (currentScroll < lastScroll) {
+          setNavVisible(true);
+        }
+        lastScroll = currentScroll;
+      } else {
+        setNavVisible(true);
+      }
+
+      // Scrollspy logic
+      const sections = isDesktop
+        ? ["hero", "portfolio", "contact"]
+        : ["profile", "hero", "portfolio", "contact"];
+      
       let currentActive = "hero";
       const threshold = window.innerHeight / 2; // Midpoint of viewport
 
@@ -56,7 +78,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen md:h-screen flex flex-col bg-[#222831] overflow-x-hidden md:overflow-hidden text-gray-100 relative w-full pt-16 md:pt-0">
       {/* Floating Navigation Bar */}
-      <Navbar activeSection={activeSection} />
+      <Navbar activeSection={activeSection} visible={navVisible} />
 
       {/* Vertical Social Icons Stack when Collapsed */}
       {collapsed && (
@@ -117,7 +139,7 @@ const App: React.FC = () => {
       } portfolio-container`}>
         
         {/* Left Column Wrapper: controls collapse layout width */}
-        <div className={`relative flex-shrink-0 transition-all duration-300 ${
+        <div id="profile" className={`relative flex-shrink-0 transition-all duration-300 ${
           collapsed
             ? "w-0 h-0 md:w-0 md:min-w-0 p-0"
             : "w-full md:w-1/3 md:min-w-[420px]"
@@ -133,10 +155,10 @@ const App: React.FC = () => {
             <AboutProfile />
           </aside>
 
-          {/* Toggle Sidebar Button: absolute inside column when expanded, fixed top-left when collapsed */}
+          {/* Toggle Sidebar Button: absolute inside column when expanded, fixed top-left when collapsed (desktop only) */}
           <button
             onClick={() => setCollapsed(!collapsed)}
-            className={`z-50 flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest uppercase text-gray-200 hover:text-[#00ADB5] transition-all duration-300 hover:scale-105 cursor-pointer outline-none select-none ${
+            className={`z-50 hidden md:flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest uppercase text-gray-200 hover:text-[#00ADB5] transition-all duration-300 hover:scale-105 cursor-pointer outline-none select-none ${
               collapsed
                 ? "fixed top-6 left-6"
                 : "absolute top-6 left-6 md:left-auto md:right-4"
