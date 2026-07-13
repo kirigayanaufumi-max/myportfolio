@@ -6,7 +6,7 @@ const AboutProfile: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="flex flex-col items-start text-left space-y-6 h-full justify-between text-gray-200 w-full pt-14 md:pt-28 pb-10 md:pb-20">
+    <div className="flex flex-col items-start text-left space-y-6 h-full justify-between text-gray-200 w-full">
       <div className="space-y-6 w-full">
         {/* Header Block: Image and Name/Title Side-by-Side */}
         <div className="flex flex-row items-center gap-4 sm:gap-6 w-full">
