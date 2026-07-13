@@ -59,30 +59,33 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, visible = true }) => {
         })}
       </div>
 
-      {/* Hamburger Menu Button (Mobile Only, rendered first so it sits on the left on mobile) */}
-      <button
-        onClick={() => setMenuOpen(!menuOpen)}
-        className="md:hidden p-1.5 text-gray-300 hover:text-[#00ADB5] transition-colors focus:outline-none cursor-pointer"
-        aria-label="Toggle menu"
-      >
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-          {menuOpen ? (
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          ) : (
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-          )}
-        </svg>
-      </button>
+      {/* Mobile Controls Wrapper: Styled background on mobile, transparent/layout-less on desktop */}
+      <div className="flex md:contents items-center gap-2 bg-[#393E46]/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border border-gray-700/50 md:border-none p-1.5 md:p-0 rounded-none shadow-lg shadow-black/30 md:shadow-none z-50">
+        {/* Hamburger Menu Button (Mobile Only, rendered first so it sits on the left on mobile) */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden p-1.5 text-gray-300 hover:text-[#00ADB5] transition-colors focus:outline-none cursor-pointer"
+          aria-label="Toggle menu"
+        >
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+            {menuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            )}
+          </svg>
+        </button>
 
-      {/* Inline Resume Button (Always Visible) */}
-      <a
-        href={resumePdf}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="px-4 py-2 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-xs text-[#00ADB5] font-bold tracking-widest uppercase rounded-none transition-all duration-300 hover:scale-105 shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer"
-      >
-        Resume
-      </a>
+        {/* Inline Resume Button (Always Visible) */}
+        <a
+          href={resumePdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-xs text-[#00ADB5] font-bold tracking-widest uppercase rounded-none transition-all duration-300 hover:scale-105 shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer"
+        >
+          Resume
+        </a>
+      </div>
 
       {/* Mobile Dropdown Menu Drawer */}
       {menuOpen && (

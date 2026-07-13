@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import profileImg from "../assets/profile.jpg";
 import profilePng from "../assets/profile.png";
 
-const AboutProfile: React.FC = () => {
+interface AboutProfileProps {
+  onEmailClick: () => void;
+}
+
+const AboutProfile: React.FC<AboutProfileProps> = ({ onEmailClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -80,15 +84,15 @@ const AboutProfile: React.FC = () => {
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
             </svg>
           </a>
-          <a
-            href="mailto:argiecalicaran.678@gmail.com"
-            className="p-2.5 bg-[#393E46] hover:bg-[#00ADB5]/20 text-gray-300 hover:text-[#00ADB5] rounded-xl transition duration-200"
+          <button
+            onClick={onEmailClick}
+            className="p-2.5 bg-[#393E46] hover:bg-[#00ADB5]/20 text-gray-300 hover:text-[#00ADB5] rounded-xl transition duration-200 cursor-pointer outline-none"
             title="Email Me"
           >
             <svg className="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </div>
