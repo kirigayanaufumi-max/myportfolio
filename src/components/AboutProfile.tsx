@@ -19,7 +19,9 @@ const AboutProfile: React.FC = () => {
             <img
               src={isHovered ? profilePng : profileImg}
               alt="Argie Calicaran Profile"
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl object-cover shadow-lg ring-4 ring-[#00ADB5]/10 transition-all duration-300 hover:scale-105"
+              className={`w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl object-cover shadow-lg ring-4 ring-[#00ADB5]/10 transition-all duration-300 hover:scale-105 ${
+                isHovered ? "grayscale" : ""
+              }`}
             />
             <span className="absolute bottom-0.5 right-0.5 flex h-3.5 w-3.5 sm:h-4 sm:w-4">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
