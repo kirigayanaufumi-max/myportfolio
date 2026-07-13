@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="flex flex-col justify-start pb-12">
+    <section id="hero" className="flex flex-col justify-start pb-12 scroll-mt-24">
       <div className="max-w-2xl space-y-6">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
           Crafting efficient <br />
