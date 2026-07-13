@@ -9,8 +9,8 @@ const AboutProfile: React.FC = () => {
     <div className="flex flex-col items-start text-left space-y-6 h-full justify-between text-gray-200 w-full">
       <div className="space-y-6 w-full">
         {/* Header Block: Image and Name/Title Side-by-Side */}
-        <div className="flex flex-row items-center gap-6 sm:gap-8 w-full">
-          {/* Profile Image & Status Badge (swaps to profile.png on hover) */}
+        <div className="flex flex-row items-center gap-3 sm:gap-4 w-full">
+          {/* Profile Image (swaps to profile.png on hover) */}
           <div
             className="relative inline-block flex-shrink-0 cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
@@ -19,19 +19,15 @@ const AboutProfile: React.FC = () => {
             <img
               src={isHovered ? profilePng : profileImg}
               alt="Argie Calicaran Profile"
-              className={`w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-2xl object-cover shadow-lg ring-4 ring-[#00ADB5]/10 transition-all duration-300 hover:scale-105 ${
+              className={`w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-2xl object-cover shadow-lg ring-4 ring-[#00ADB5]/10 transition-all duration-300 hover:scale-105 ${
                 isHovered ? "grayscale" : ""
               }`}
             />
-            <span className="absolute bottom-0.5 right-0.5 flex h-3.5 w-3.5 sm:h-4 sm:w-4">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3.5 w-3.5 sm:h-4 sm:w-4 bg-green-500 border-2 border-[#222831]"></span>
-            </span>
           </div>
 
           {/* Name & Title (Always to the right of the picture on PC and mobile) */}
           <div className="space-y-1 sm:space-y-2 flex-grow">
-            <h1 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-none whitespace-nowrap">
+            <h1 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-white tracking-tight leading-none whitespace-nowrap">
               Argie Calicaran
             </h1>
             <p className="text-sm sm:text-base font-semibold text-gray-400 tracking-wide uppercase leading-tight pt-1">

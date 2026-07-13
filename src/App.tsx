@@ -12,15 +12,15 @@ const App: React.FC = () => {
       {/* Dynamic Background Particles */}
       <ParticleBackground />
 
-      {/* Main Column Layout Container (Capped at max-w-[1440px], outer margins set to 48px, center gap set to 144px) */}
+      {/* Main Column Layout Container (Capped at max-w-[1440px], outer margins adjusted to 32px (md:pl-8/md:pr-8) to free up horizontal space) */}
       <div className="flex-grow flex flex-col md:flex-row overflow-x-hidden md:overflow-hidden w-full max-w-[1440px] mx-auto bg-transparent md:h-screen relative z-10 gap-8 md:gap-36">
-        {/* Left Column: Fixed width (w-1/3) and full height (h-screen) on desktop */}
-        <aside className="w-full md:w-1/3 bg-transparent flex-shrink-0 md:h-screen md:overflow-y-auto px-6 sm:px-10 md:pl-12 md:pr-0 pt-12 md:pt-28 pb-10 md:pb-20">
+        {/* Left Column: Fixed width (w-1/3, minimum 420px on desktop) and full height (h-screen) on desktop */}
+        <aside className="w-full md:w-1/3 md:min-w-[420px] bg-transparent flex-shrink-0 md:h-screen md:overflow-y-auto px-6 sm:px-10 md:pl-8 md:pr-0 pt-12 md:pt-28 pb-10 md:pb-20">
           <AboutProfile />
         </aside>
 
         {/* Right Column: Flexible width (flex-1) and scrollable (overflow-y-scroll) on desktop */}
-        <main className="w-full md:flex-1 md:h-screen md:overflow-y-scroll scroll-smooth bg-transparent px-6 sm:px-10 md:pl-0 md:pr-12 pt-12 md:pt-28 flex flex-col justify-between">
+        <main className="w-full md:flex-1 md:h-screen md:overflow-y-scroll scroll-smooth bg-transparent px-6 sm:px-10 md:pl-0 md:pr-8 pt-12 md:pt-28 flex flex-col justify-between">
           <div className="w-full space-y-12 pb-12">
             <Hero />
             <Portfolio />
