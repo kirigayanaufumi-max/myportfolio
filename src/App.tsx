@@ -197,7 +197,9 @@ const App: React.FC = () => {
               : "px-6 sm:px-10 md:pl-0 md:pr-8"
           }`}
         >
-          <div className="w-full space-y-12 pb-12">
+          <div className={`w-full space-y-12 pb-12 transition-all duration-300 ${
+            collapsed ? "max-w-6xl mx-auto" : ""
+          }`}>
             <Portfolio />
             <Skills />
             <Contact />
