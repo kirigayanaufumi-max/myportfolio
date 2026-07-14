@@ -12,27 +12,21 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-12 scroll-mt-24">
-      <div className="bg-gradient-to-br from-[#00ADB5] to-[#1a2332] rounded-3xl p-8 md:p-10 text-white shadow-lg shadow-[#00ADB5]/5 relative overflow-hidden">
-        {/* Background decorative shapes */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full translate-x-20 -translate-y-20 blur-2xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#00ADB5]/10 rounded-full -translate-x-20 translate-y-20 blur-xl pointer-events-none"></div>
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 border-t border-gray-800/50 pt-10">
+        <div className="space-y-3">
+          <h2 className="text-3xl font-extrabold text-white tracking-tight">Get in Touch</h2>
+          <p className="text-gray-400 text-2xl max-w-md">
+            Have an exciting project, job opening, or just want to chat about development? Feel free to reach out.
+          </p>
+        </div>
 
-        <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div className="space-y-3">
-            <h2 className="text-3xl font-extrabold text-white tracking-tight">Get in Touch</h2>
-            <p className="text-blue-50/90 text-sm max-w-md">
-              Have an exciting project, job opening, or just want to chat about development? Feel free to reach out.
-            </p>
-          </div>
-
-          <div className="w-full md:w-auto flex-shrink-0">
-            <button
-              onClick={() => setModalOpen(true)}
-              className="w-full md:w-auto px-8 py-4 bg-white hover:bg-blue-50 text-[#222831] font-semibold rounded-xl text-center shadow-md transition-all duration-200 cursor-pointer"
-            >
-              Email
-            </button>
-          </div>
+        <div className="w-full md:w-auto flex-shrink-0">
+          <button
+            onClick={() => setModalOpen(true)}
+            className="w-full md:w-auto px-8 py-4 bg-white hover:bg-blue-50 text-[#222831] font-semibold rounded-xl text-center shadow-md transition-all duration-200 cursor-pointer"
+          >
+            Email
+          </button>
         </div>
       </div>
       {/* Email Info Modal */}

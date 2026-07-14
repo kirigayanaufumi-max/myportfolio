@@ -17,6 +17,12 @@ const projects: Project[] = [
     description: "Automated email alerts for user actions.",
     tech: ["PHP", "PHPMailer"],
     link: "https://github.com/argie/mailer"
+  },
+  {
+    title: "Real-Time Integration Dashboard",
+    description: "Built a Vite + React dashboard that tracks Google API quotas, logs automated PHPMailer events, and displays execution stats from a Node.js/Express backend.",
+    tech: ["React", "TypeScript", "Node.js", "MySQL"],
+    link: "https://github.com/argie/integration-dashboard"
   }
 ];
 

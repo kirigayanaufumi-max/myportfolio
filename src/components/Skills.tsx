@@ -169,7 +169,7 @@ const Skills: React.FC = () => {
           <h3 className="text-lg font-bold text-white tracking-wide border-b border-gray-800 pb-2">
             Technical Stack
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             {techSkills.map((skill, index) => (
               <div
                 key={index}
