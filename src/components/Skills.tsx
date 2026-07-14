@@ -150,9 +150,9 @@ const Skills: React.FC = () => {
             {softSkills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-[#393E46]/30 border border-gray-700/20 hover:border-[#00ADB5]/50 p-5 rounded-md flex items-start gap-4 transition-all duration-300 hover:scale-[1.02] hover:bg-[#393E46]/60 group shadow-md shadow-black/10"
+                className="bg-[#393E46]/30 border border-gray-700/20 hover:border-[#00ADB5]/50 p-5 rounded-md flex items-start gap-4 transition-all duration-300 md:hover:scale-[1.02] hover:bg-[#393E46]/60 group shadow-md shadow-black/10"
               >
-                <div className="p-2.5 bg-[#222831] rounded-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="p-2.5 bg-[#222831] rounded-xl flex-shrink-0 md:group-hover:scale-110 transition-transform duration-300">
                   {skill.icon}
                 </div>
                 <div className="space-y-1">
@@ -173,9 +173,9 @@ const Skills: React.FC = () => {
             {techSkills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-[#393E46]/30 border border-gray-700/20 hover:border-[#00ADB5]/50 p-3 sm:p-5 rounded-md flex flex-col items-center justify-center text-center gap-3 transition-all duration-300 hover:scale-105 hover:bg-[#393E46]/60 group shadow-md shadow-black/10"
+                className="bg-[#393E46]/30 border border-gray-700/20 hover:border-[#00ADB5]/50 p-3 sm:p-5 rounded-md flex flex-col items-center justify-center text-center gap-3 transition-all duration-300 md:hover:scale-105 hover:bg-[#393E46]/60 group shadow-md shadow-black/10"
               >
-                <div className="p-3 bg-[#222831] rounded-xl group-hover:scale-110 transition-transform duration-300">
+                <div className="p-3 bg-[#222831] rounded-xl md:group-hover:scale-110 transition-transform duration-300">
                   {skill.icon}
                 </div>
                 <div className="space-y-0.5">
