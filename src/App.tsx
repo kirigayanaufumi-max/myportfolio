@@ -142,18 +142,18 @@ const App: React.FC = () => {
       <ParticleBackground />
 
       {/* Main Column Layout Container */}
-      <div className={`flex-grow flex flex-col md:flex-row overflow-x-hidden md:overflow-hidden w-full bg-transparent md:h-screen relative z-10 transition-all duration-300 ${
+      <div className={`flex-grow flex flex-col md:flex-row overflow-x-hidden md:overflow-hidden w-full bg-transparent md:h-screen relative z-10 md:transition-all md:duration-300 ${
         collapsed ? "gap-0" : "gap-8 md:gap-36"
       } portfolio-container`}>
         
         {/* Left Column Wrapper: controls collapse layout width */}
-        <div id="profile" className={`relative flex-shrink-0 transition-all duration-300 ${
+        <div id="profile" className={`relative flex-shrink-0 md:transition-all md:duration-300 ${
           collapsed
             ? "w-0 h-0 md:w-0 md:min-w-0 p-0"
             : "w-full md:w-1/3 md:min-w-[420px]"
         }`}>
           <aside
-            className={`w-full h-full md:h-screen md:overflow-y-auto pt-12 md:pt-28 pb-10 md:pb-20 px-6 sm:px-10 md:pl-8 md:pr-0 transition-all duration-300 ${
+            className={`w-full h-full md:h-screen md:overflow-y-auto pt-12 md:pt-28 pb-10 md:pb-20 px-6 sm:px-10 md:pl-8 md:pr-0 md:transition-all md:duration-300 ${
               collapsed
                 ? "w-0 h-0 overflow-hidden opacity-0 pointer-events-none"
                 : "opacity-100"
@@ -191,13 +191,13 @@ const App: React.FC = () => {
         {/* Right Column: Flexible width (flex-1) and scrollable (overflow-y-scroll) on desktop */}
         <main
           ref={mainRef}
-          className={`w-full md:flex-1 md:h-screen md:overflow-y-scroll scroll-smooth bg-transparent pt-12 md:pt-28 flex flex-col justify-between scrollbar scrollbar-thin scrollbar-thumb-[#393E46] hover:scrollbar-thumb-[#00ADB5] scrollbar-track-transparent portfolio-main transition-all duration-300 ${
+          className={`w-full md:flex-1 md:h-screen md:overflow-y-scroll scroll-smooth bg-transparent pt-12 md:pt-28 flex flex-col justify-between scrollbar scrollbar-thin scrollbar-thumb-[#393E46] hover:scrollbar-thumb-[#00ADB5] scrollbar-track-transparent portfolio-main md:transition-all md:duration-300 ${
             collapsed
               ? "pl-20 pr-6 sm:pl-24 sm:pr-10 md:pl-20 md:pr-8"
               : "px-6 sm:px-10 md:pl-0 md:pr-8"
           }`}
         >
-          <div className={`w-full space-y-12 pb-12 transition-all duration-300 ${
+          <div className={`w-full space-y-12 pb-12 md:transition-all md:duration-300 ${
             collapsed ? "max-w-6xl mx-auto" : ""
           }`}>
             <Portfolio />
@@ -205,7 +205,7 @@ const App: React.FC = () => {
             <Contact />
           </div>
           {/* Footer container with same alignment rule when collapsed */}
-          <div className={`w-full transition-all duration-300 ${
+          <div className={`w-full md:transition-all md:duration-300 ${
             collapsed ? "max-w-6xl mx-auto" : ""
           }`}>
             <Footer />
