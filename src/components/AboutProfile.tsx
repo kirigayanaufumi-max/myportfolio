@@ -34,7 +34,7 @@ const AboutProfile: React.FC<AboutProfileProps> = ({ onEmailClick }) => {
             <h1 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-white tracking-tight leading-none whitespace-nowrap">
               Argie Calicaran
             </h1>
-            <p className="text-sm sm:text-base font-semibold text-gray-400 tracking-wide uppercase leading-tight pt-1">
+            <p className="text-sm sm:text-base font-semibold text-[#00ADB5] tracking-wide uppercase leading-tight pt-1">
               Web Developer
             </p>
           </div>

@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, lin
         {/* Project Title */}
         <h3 className="text-2xl font-bold text-white group-hover:text-[#00ADB5] transition-colors duration-200">
           {title}
-        </h3>
+        </h3> 
         
         {/* Project Description */}
         <p className="text-gray-300 text-base leading-relaxed">

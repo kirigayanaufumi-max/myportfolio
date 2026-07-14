@@ -133,13 +133,10 @@ const Skills: React.FC = () => {
     <section id="skills" className="pb-12 scroll-mt-24">
       <div className="max-w-2xl space-y-12">
         <div className="space-y-2">
-          <span className="text-xs font-semibold tracking-widest text-[#00ADB5] uppercase">
-            Expertise
-          </span>
-          <h2 className="text-3xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl font-extrabold hover:text-[#00ADB5] transition-colors duration-200 ">
             My Skills
           </h2>
-          <p className="text-gray-400 text-sm max-w-md">
+          <p className="text-gray-400 text-sm hover:text-[#00ADB5] transition-colors duration-200 max-w-md">
             A combination of professional work values and technical stack capabilities.
           </p>
         </div>
