@@ -143,7 +143,7 @@ const Skills: React.FC = () => {
 
         {/* Soft Skills Section (First) */}
         <div className="space-y-6">
-          <h3 className="text-lg font-bold text-white tracking-wide border-b border-gray-800 pb-2">
+          <h3 className="text-lg font-bold text-white tracking-wide pb-2">
             Core Attributes
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -166,7 +166,7 @@ const Skills: React.FC = () => {
 
         {/* Technical Skills Section (Second) */}
         <div className="space-y-6">
-          <h3 className="text-lg font-bold text-white tracking-wide border-b border-gray-800 pb-2">
+          <h3 className="text-lg font-bold text-white tracking-wide pb-2">
             Technical Stack
           </h3>
           <div className="grid grid-cols-3 gap-4">

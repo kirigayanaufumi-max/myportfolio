@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-12 scroll-mt-24">
-      <div className="flex flex-col items-start gap-6 border-t border-gray-800/50 pt-10">
+      <div className="flex flex-col items-start gap-6">
         <div className="space-y-3">
           <h2 className="text-3xl font-extrabold text-white tracking-tight">Get in Touch</h2>
           <p className="text-gray-400 text-xl max-w-md">
@@ -85,9 +85,12 @@ const Contact: React.FC = () => {
             <a
               href="mailto:argiecalicaran.678@gmail.com"
               onClick={() => setModalOpen(false)}
-              className="w-full py-3 bg-[#00ADB5] hover:bg-[#00E5FF] text-white font-semibold rounded-xl text-center shadow-md shadow-[#00ADB5]/20 hover:shadow-[#00E5FF]/20 transition-all duration-200 cursor-pointer block text-xs tracking-widest uppercase"
+              className="w-full py-2.5 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-xs text-[#00ADB5] font-bold tracking-widest uppercase rounded-none transition-all duration-300 hover:scale-[1.02] shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer flex items-center justify-center gap-2"
             >
-              Open Mail App
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+              <span>Open Mail App</span>
             </a>
           </div>
         </div>
