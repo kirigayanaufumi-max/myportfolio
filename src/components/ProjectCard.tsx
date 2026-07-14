@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, link }) => {
   return (
-    <div className="group bg-[#393E46] rounded-md p-8 shadow-md hover:shadow-2xl hover:shadow-[#00ADB5]/5 transition-all duration-300 flex flex-col justify-between h-full">
+    <div className="group bg-[#393E46]/30 border border-gray-700/20 hover:border-[#00ADB5]/50 hover:bg-[#393E46]/60 rounded-md p-8 shadow-md hover:shadow-2xl hover:shadow-[#00ADB5]/5 transition-all duration-300 flex flex-col justify-between h-full">
       <div className="space-y-5">
         {/* Project Title */}
         <h3 className="text-2xl font-bold text-white group-hover:text-[#00ADB5] transition-colors duration-200">
