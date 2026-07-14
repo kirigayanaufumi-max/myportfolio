@@ -12,20 +12,20 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-12 scroll-mt-24">
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 border-t border-gray-800/50 pt-10">
+      <div className="flex flex-col items-start gap-6 border-t border-gray-800/50 pt-10">
         <div className="space-y-3">
           <h2 className="text-3xl font-extrabold text-white tracking-tight">Get in Touch</h2>
-          <p className="text-gray-400 text-2xl max-w-md">
+          <p className="text-gray-400 text-xl max-w-md">
             Have an exciting project, job opening, or just want to chat about development? Feel free to reach out.
           </p>
         </div>
 
-        <div className="w-full md:w-auto flex-shrink-0">
+        <div className="w-full md:w-auto">
           <button
             onClick={() => setModalOpen(true)}
             className="w-full md:w-auto px-8 py-4 bg-white hover:bg-blue-50 text-[#222831] font-semibold rounded-xl text-center shadow-md transition-all duration-200 cursor-pointer"
           >
-            Email
+            Email Me
           </button>
         </div>
       </div>
