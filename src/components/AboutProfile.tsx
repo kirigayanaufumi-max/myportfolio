@@ -23,9 +23,8 @@ const AboutProfile: React.FC<AboutProfileProps> = ({ onEmailClick }) => {
             <img
               src={isHovered ? profilePng : profileImg}
               alt="Argie Calicaran Profile"
-              className={`w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-2xl object-cover shadow-lg ring-4 ring-[#00ADB5]/10 transition-all duration-300 hover:scale-105 ${
-                isHovered ? "grayscale" : ""
-              }`}
+              className={`w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-2xl object-cover shadow-lg ring-4 ring-[#00ADB5]/10 transition-all duration-300 hover:scale-105 ${isHovered ? "grayscale" : ""
+                }`}
             />
           </div>
 
@@ -42,11 +41,10 @@ const AboutProfile: React.FC<AboutProfileProps> = ({ onEmailClick }) => {
 
         {/* Bio Paragraph (Flows below the image/title row) */}
         <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-md pt-2">
-            Hello, I’m Argie — a fresh graduate with a Bachelor’s in Information Systems and Technology.  
-            I specialize in building robust, high‑performance web applications with a focus on custom integrations, automated email systems, and clean, user‑friendly interfaces.  
-            I’m driven by efficiency, clean code, and practical solutions. My experience includes working with PHP, SQL, Bootstrap, and modern frontend frameworks like React and Tailwind. I enjoy optimizing workflows, handling edge cases, and designing interfaces that feel intuitive.  
-            As a newcomer to the industry, I bring fresh energy, adaptability, and a strong eagerness to learn. I’m excited to contribute to teams where I can grow while delivering real impact through technology.
+          Hello, I’m Argie and I’m a fresh graduate with a Bachelor’s degree in Information Technology.
+          I’m passionate about leveraging technology to solve practical challenges. My hands-on experience includes developing web applications using PHP, SQL, Bootstrap, and modern frontend technologies such as React and Tailwind CSS. I am committed to writing clean, efficient code while constantly seeking ways to improve workflows and user experiences.
         </p>
+        <p className="text-gray-300 text-base md:text-sm leading-relaxed max-w-md pt-2">I am open to freelance opportunities, contracts, and full-time web development roles.</p>
       </div>
 
       {/* Social Links & Footer CTA */}
@@ -60,7 +58,7 @@ const AboutProfile: React.FC<AboutProfileProps> = ({ onEmailClick }) => {
             title="GitHub"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/>
+              <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
             </svg>
           </a>
           <a
@@ -71,7 +69,7 @@ const AboutProfile: React.FC<AboutProfileProps> = ({ onEmailClick }) => {
             title="LinkedIn"
           >
             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
             </svg>
           </a>
           <a
