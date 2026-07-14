@@ -204,8 +204,12 @@ const App: React.FC = () => {
             <Skills />
             <Contact />
           </div>
-          {/* Footer spans the full width at the bottom of the right column */}
-          <Footer />
+          {/* Footer container with same alignment rule when collapsed */}
+          <div className={`w-full transition-all duration-300 ${
+            collapsed ? "max-w-6xl mx-auto" : ""
+          }`}>
+            <Footer />
+          </div>
         </main>
       </div>
 
