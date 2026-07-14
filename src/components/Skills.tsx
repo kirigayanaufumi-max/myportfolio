@@ -169,11 +169,11 @@ const Skills: React.FC = () => {
           <h3 className="text-lg font-bold text-white tracking-wide pb-2">
             Technical Stack
           </h3>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {techSkills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-[#393E46]/30 border border-gray-700/20 hover:border-[#00ADB5]/50 p-5 rounded-md flex flex-col items-center justify-center text-center gap-3 transition-all duration-300 hover:scale-105 hover:bg-[#393E46]/60 group shadow-md shadow-black/10"
+                className="bg-[#393E46]/30 border border-gray-700/20 hover:border-[#00ADB5]/50 p-3 sm:p-5 rounded-md flex flex-col items-center justify-center text-center gap-3 transition-all duration-300 hover:scale-105 hover:bg-[#393E46]/60 group shadow-md shadow-black/10"
               >
                 <div className="p-3 bg-[#222831] rounded-xl group-hover:scale-110 transition-transform duration-300">
                   {skill.icon}

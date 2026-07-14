@@ -39,9 +39,8 @@ const ParticleBackground: React.FC = () => {
     };
 
     const resizeCanvas = () => {
-      const parent = canvas.parentElement;
-      canvas.width = parent ? parent.clientWidth : window.innerWidth;
-      canvas.height = parent ? parent.clientHeight : window.innerHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       initParticles();
     };
 
@@ -121,27 +120,18 @@ const ParticleBackground: React.FC = () => {
     document.addEventListener("mouseleave", handleMouseLeave);
     drawParticles();
 
-    // Observe size changes of the parent container
-    const resizeObserver = new ResizeObserver(() => {
-      resizeCanvas();
-    });
-    if (canvas.parentElement) {
-      resizeObserver.observe(canvas.parentElement);
-    }
-
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", resizeCanvas);
       window.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseleave", handleMouseLeave);
-      resizeObserver.disconnect();
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none w-full h-full z-0 block"
+      className="fixed inset-0 pointer-events-none w-full h-full z-0 block"
     />
   );
 };
