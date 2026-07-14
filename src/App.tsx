@@ -6,7 +6,6 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import ParticleBackground from "./components/ParticleBackground";
 import Navbar from "./components/Navbar";
-import LiveCounter from "./components/LiveCounter";
 
 const App: React.FC = () => {
   const mainRef = useRef<HTMLElement>(null);
@@ -269,8 +268,6 @@ const App: React.FC = () => {
         </div>
       )}
 
-      {/* Floating Live Counter */}
-      <LiveCounter />
     </div>
   );
 };
