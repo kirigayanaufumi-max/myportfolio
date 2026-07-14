@@ -84,7 +84,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen md:h-screen flex flex-col bg-[#222831] overflow-x-hidden md:overflow-hidden text-gray-100 relative w-full pt-16 md:pt-0">
+    <div className="min-h-screen md:h-screen flex flex-col bg-[#222831] overflow-x-clip md:overflow-hidden text-gray-100 relative w-full pt-16 md:pt-0">
       {/* Floating Navigation Bar */}
       <Navbar activeSection={activeSection} visible={navVisible} />
 
@@ -142,7 +142,7 @@ const App: React.FC = () => {
       <ParticleBackground />
 
       {/* Main Column Layout Container */}
-      <div className={`flex-grow flex flex-col md:flex-row overflow-x-hidden md:overflow-hidden w-full bg-transparent md:h-screen relative z-10 md:transition-all md:duration-300 ${
+      <div className={`flex-grow flex flex-col md:flex-row overflow-x-clip md:overflow-hidden w-full bg-transparent md:h-screen relative z-10 md:transition-all md:duration-300 ${
         collapsed ? "gap-0" : "gap-8 md:gap-36"
       } portfolio-container`}>
         
