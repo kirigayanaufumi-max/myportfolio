@@ -166,7 +166,7 @@ const App: React.FC = () => {
           {/* Toggle Sidebar Button: absolute inside column when expanded, fixed top-left when collapsed (desktop only) */}
           <button
             onClick={() => setCollapsed(!collapsed)}
-            className={`z-50 hidden md:flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest uppercase text-gray-200 hover:text-[#00ADB5] transition-all duration-300 hover:scale-105 cursor-pointer outline-none select-none ${
+            className={`z-50 hidden md:flex items-center gap-2 text-lg sm:text-xl font-vt323 tracking-wider uppercase text-gray-200 hover:text-[#00ADB5] transition-all duration-300 hover:scale-105 cursor-pointer outline-none select-none ${
               collapsed
                 ? "fixed top-6 left-6"
                 : "absolute top-6 left-6 md:left-auto md:right-4"

@@ -180,7 +180,7 @@ const Skills: React.FC = () => {
                 </div>
                 <div className="space-y-0.5">
                   <h4 className="font-bold text-sm text-white tracking-wide">{skill.name}</h4>
-                  <span className="text-[10px] text-gray-400 font-semibold tracking-wider uppercase">{skill.level}</span>
+                  <span className="text-xs text-gray-400 font-semibold tracking-wider uppercase">{skill.level}</span>
                 </div>
               </div>
             ))}

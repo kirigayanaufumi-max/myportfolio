@@ -31,10 +31,10 @@ const AboutProfile: React.FC<AboutProfileProps> = ({ onEmailClick }) => {
 
           {/* Name & Title (Always to the right of the picture on PC and mobile) */}
           <div className="space-y-1 sm:space-y-2 flex-grow">
-            <h1 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold text-white tracking-tight leading-none whitespace-nowrap">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-vt323 font-extrabold text-white tracking-wide leading-none whitespace-nowrap">
               Argie Calicaran
             </h1>
-            <p className="text-sm sm:text-base font-semibold text-[#00ADB5] tracking-wide uppercase leading-tight pt-1">
+            <p className="text-lg sm:text-xl font-vt323 font-semibold text-[#00ADB5] tracking-wider uppercase leading-tight pt-1">
               Web Developer
             </p>
           </div>

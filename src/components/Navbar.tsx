@@ -45,7 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, visible = true }) => {
               key={item.id}
               href={`#${item.id}`}
               onClick={(e) => handleNavClick(e, item.id)}
-              className={`text-sm font-bold tracking-widest uppercase transition-all duration-300 outline-none cursor-pointer ${
+              className={`text-xl font-vt323 tracking-wider uppercase transition-all duration-300 outline-none cursor-pointer ${
                 item.mobileOnly ? "md:hidden" : ""
               } ${
                 isActive
@@ -81,13 +81,13 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, visible = true }) => {
           href={resumePdf}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-sm text-[#00ADB5] font-bold tracking-widest uppercase rounded-md transition-all duration-300 hover:scale-105 shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer flex items-center gap-2"
+          className="px-4 py-1.5 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-lg font-vt323 text-[#00ADB5] tracking-wider uppercase rounded-md transition-all duration-300 hover:scale-105 shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer flex items-center gap-2"
           title="Download Resume"
         >
-          <span>Resume</span>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
+          <span>Resume</span>
         </a>
       </div>
 
@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, visible = true }) => {
                   handleNavClick(e, item.id);
                   setMenuOpen(false);
                 }}
-                className={`text-[10px] font-bold tracking-widest uppercase transition-all duration-200 py-1.5 px-2 rounded-md cursor-pointer text-center ${
+                className={`text-lg font-vt323 tracking-wider uppercase transition-all duration-200 py-1 px-2 rounded-md cursor-pointer text-center ${
                   isActive
                     ? "text-[#00ADB5] bg-[#00ADB5]/10 drop-shadow-[0_0_8px_rgba(0,173,181,0.6)]"
                     : "text-gray-300 hover:text-gray-100 hover:bg-gray-700/30"
