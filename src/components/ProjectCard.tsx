@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, link }) => {
   return (
-    <div className="group bg-[#393E46] rounded-3xl p-8 shadow-md hover:shadow-2xl hover:shadow-[#00ADB5]/5 transition-all duration-300 flex flex-col justify-between h-full">
+    <div className="group bg-[#393E46] rounded-md p-8 shadow-md hover:shadow-2xl hover:shadow-[#00ADB5]/5 transition-all duration-300 flex flex-col justify-between h-full">
       <div className="space-y-5">
         {/* Project Title */}
         <h3 className="text-2xl font-bold text-white group-hover:text-[#00ADB5] transition-colors duration-200">
@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tech, lin
           {tech.map((t, i) => (
             <span
               key={i}
-              className="px-3 py-1.5 bg-[#222831] text-gray-300 text-sm font-medium rounded-xl"
+              className="px-3 py-1.5 bg-[#222831] text-gray-300 text-sm font-medium rounded-md"
             >
               {t}
             </span>

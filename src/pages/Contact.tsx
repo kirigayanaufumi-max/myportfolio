@@ -23,19 +23,19 @@ const Contact: React.FC = () => {
         <div className="w-full md:w-auto">
           <button
             onClick={() => setModalOpen(true)}
-            className="px-5 py-2.5 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-sm text-[#00ADB5] font-bold tracking-widest uppercase rounded-none transition-all duration-300 hover:scale-105 shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer flex items-center justify-center gap-2"
+            className="px-5 py-2.5 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-sm text-[#00ADB5] font-bold tracking-widest uppercase rounded-md transition-all duration-300 hover:scale-105 shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer flex items-center justify-center gap-2"
           >
-            <span>Email Me</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
+            <span>Email</span>
           </button>
         </div>
       </div>
       {/* Email Info Modal */}
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in">
-          <div className="bg-[#222831] border border-gray-700/50 max-w-sm w-full rounded-2xl p-6 relative shadow-2xl flex flex-col gap-6 text-gray-200">
+          <div className="bg-[#222831] border border-gray-700/50 max-w-sm w-full rounded-md p-6 relative shadow-2xl flex flex-col gap-6 text-gray-200">
             
             {/* Close Icon Button */}
             <button
@@ -55,13 +55,13 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Email Address Panel with Copy button */}
-            <div className="flex items-center justify-between gap-3 bg-[#393E46]/50 border border-gray-700/50 p-3 rounded-xl">
+            <div className="flex items-center justify-between gap-3 bg-[#393E46]/50 border border-gray-700/50 p-3 rounded-md">
               <span className="text-xs sm:text-sm font-semibold select-all text-[#00ADB5] overflow-x-auto whitespace-nowrap scrollbar-none">
                 argiecalicaran.678@gmail.com
               </span>
               <button
                 onClick={handleCopy}
-                className="px-3 py-1.5 bg-[#393E46] hover:bg-[#00ADB5]/20 text-gray-300 hover:text-[#00ADB5] border border-gray-700/50 hover:border-[#00ADB5]/30 rounded-lg text-[10px] sm:text-xs font-semibold tracking-wide transition duration-200 flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
+                className="px-3 py-1.5 bg-[#393E46] hover:bg-[#00ADB5]/20 text-gray-300 hover:text-[#00ADB5] border border-gray-700/50 hover:border-[#00ADB5]/30 rounded-md text-[10px] sm:text-xs font-semibold tracking-wide transition duration-200 flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
               >
                 {copied ? (
                   <>
@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
             <a
               href="mailto:argiecalicaran.678@gmail.com"
               onClick={() => setModalOpen(false)}
-              className="w-full py-2.5 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-xs text-[#00ADB5] font-bold tracking-widest uppercase rounded-none transition-all duration-300 hover:scale-[1.02] shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer flex items-center justify-center gap-2"
+              className="w-full py-2.5 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-xs text-[#00ADB5] font-bold tracking-widest uppercase rounded-md transition-all duration-300 hover:scale-[1.02] shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer flex items-center justify-center gap-2"
             >
               <span>Open Mail</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">

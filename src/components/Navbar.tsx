@@ -60,7 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, visible = true }) => {
       </div>
 
       {/* Mobile Controls Wrapper: Styled background on mobile, transparent/layout-less on desktop */}
-      <div className="flex md:contents items-center gap-2 bg-[#393E46]/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border border-gray-700/50 md:border-none p-1.5 md:p-0 rounded-none shadow-lg shadow-black/30 md:shadow-none z-50">
+      <div className="flex md:contents items-center gap-2 bg-[#393E46]/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border border-gray-700/50 md:border-none p-1.5 md:p-0 rounded-md shadow-lg shadow-black/30 md:shadow-none z-50">
         {/* Hamburger Menu Button (Mobile Only, rendered first so it sits on the left on mobile) */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -81,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, visible = true }) => {
           href={resumePdf}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-sm text-[#00ADB5] font-bold tracking-widest uppercase rounded-none transition-all duration-300 hover:scale-105 shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer flex items-center gap-2"
+          className="px-4 py-2 border border-[#00ADB5]/50 hover:border-[#00ADB5] hover:bg-[#00ADB5]/10 text-sm text-[#00ADB5] font-bold tracking-widest uppercase rounded-md transition-all duration-300 hover:scale-105 shadow-sm shadow-[#00ADB5]/10 hover:shadow-[#00ADB5]/30 cursor-pointer flex items-center gap-2"
           title="Download Resume"
         >
           <span>Resume</span>
@@ -93,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, visible = true }) => {
 
       {/* Mobile Dropdown Menu Drawer */}
       {menuOpen && (
-        <div className="absolute top-14 left-0 md:left-auto md:right-0 w-36 bg-[#393E46]/95 backdrop-blur-md border border-gray-700/50 rounded-xl py-2.5 px-3 shadow-xl flex flex-col gap-2.5 animate-fade-in md:hidden">
+        <div className="absolute top-14 left-0 md:left-auto md:right-0 w-36 bg-[#393E46]/95 backdrop-blur-md border border-gray-700/50 rounded-md py-2.5 px-3 shadow-xl flex flex-col gap-2.5 animate-fade-in md:hidden">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection, visible = true }) => {
                   handleNavClick(e, item.id);
                   setMenuOpen(false);
                 }}
-                className={`text-[10px] font-bold tracking-widest uppercase transition-all duration-200 py-1.5 px-2 rounded-lg cursor-pointer text-center ${
+                className={`text-[10px] font-bold tracking-widest uppercase transition-all duration-200 py-1.5 px-2 rounded-md cursor-pointer text-center ${
                   isActive
                     ? "text-[#00ADB5] bg-[#00ADB5]/10 drop-shadow-[0_0_8px_rgba(0,173,181,0.6)]"
                     : "text-gray-300 hover:text-gray-100 hover:bg-gray-700/30"
