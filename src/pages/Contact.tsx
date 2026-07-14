@@ -13,41 +13,19 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-12 scroll-mt-24">
       <div className="space-y-2 mb-10">
-        <span className="text-xs font-semibold tracking-widest text-[#00ADB5] uppercase">
-          Connect
-        </span>
-        <h2 className="text-3xl font-extrabold text-white tracking-tight">
+        <h2 className="text-3xl font-extrabold text-white hover:text-[#00ADB5] transition-colors duration-200">
           Get in Touch
         </h2>
-        <p className="text-gray-400 text-sm max-w-md">
+        <p className="text-lg text-[#00ADB5] max-w-md">
           Have an exciting project, job opening, or just want to chat about development? Feel free to reach out.
         </p>
+        <button
+            onClick={() => setModalOpen(true)}
+            className="w-full md:w-auto px-8 py-4 bg-white hover:bg-blue-50 text-[#222831] font-semibold rounded-xl text-center shadow-md transition-all duration-200 cursor-pointer"
+          >
+            Email 
+        </button>
       </div>
-
-      <div className="bg-gradient-to-br from-[#00ADB5] to-[#1a2332] rounded-3xl p-8 md:p-10 text-white shadow-lg shadow-[#00ADB5]/5 relative overflow-hidden">
-        {/* Background decorative shapes */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full translate-x-20 -translate-y-20 blur-2xl pointer-events-none"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#00ADB5]/10 rounded-full -translate-x-20 translate-y-20 blur-xl pointer-events-none"></div>
-
-        <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div className="space-y-3">
-            <h3 className="text-2xl font-bold">Let's build something together</h3>
-            <p className="text-blue-50/90 text-sm max-w-md">
-              I am currently open to freelance opportunities, contracts, and full-time software engineering roles.
-            </p>
-          </div>
-
-          <div className="w-full md:w-auto flex-shrink-0">
-            <button
-              onClick={() => setModalOpen(true)}
-              className="w-full md:w-auto px-8 py-4 bg-white hover:bg-blue-50 text-[#222831] font-semibold rounded-xl text-center shadow-md transition-all duration-200 cursor-pointer"
-            >
-              Email 
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Email Info Modal */}
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in">
